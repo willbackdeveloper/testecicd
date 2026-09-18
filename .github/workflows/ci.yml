@@ -22,3 +22,9 @@ jobs:
 
       - name: Build Executar test
         run: mvn clean test
+
+      - name: Guardar o jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: testededeploy-jar
+          path: target/testededeploy-0.0.1-SNAPSHOT.jar
