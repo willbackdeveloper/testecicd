@@ -40,4 +40,6 @@ jobs:
           name: testededeploy-jar
 
       - name: Verificar arquivo
-        run: ls -ln
+        run: |
+          ls -lh
+          file testededeploy-0.0.1-SNAPSHOT.jar
