@@ -39,7 +39,8 @@ jobs:
         with:
           name: testededeploy-jar
 
-      - name: Verificar arquivo
+      - name: Executar app
         run: |
-          ls -lh
-          file testededeploy-0.0.1-SNAPSHOT.jar
+          java -jar testededeploy-0.0.1-SNAPSHOT.jar &
+          sleep 10
+          curl "http://localhost:8080/teste"
