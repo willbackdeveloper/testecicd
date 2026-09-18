@@ -11,7 +11,7 @@ public class TesteController {
 
     @GetMapping("/teste")
     public String hellWorld(@RequestParam(defaultValue = "World") String nome){
-        return String.format("olá %s", nome);
+        return String.format("Hello %s", nome);
     }
 
 }
