@@ -37,7 +37,7 @@ jobs:
       - name: Baixar jar
         uses: actions/download-artifact@v4
         with:
-          name: testedeploy-jar
+          name: testededeploy-jar
 
       - name: Verificar arquivo
         run: ls -ln
