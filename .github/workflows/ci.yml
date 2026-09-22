@@ -33,6 +33,12 @@ jobs:
       - name: Build da imagem
         run: docker build -t testededeploy:1.0 .
 
+      - name: Tag da imagem para o GHCR
+        run: docker tag testededeploy:1.0 ghcr.io/willbackdeveloper/testededeploy:1.0
+
+      - name: Push da imagem para o GHCR
+        run: docker push ghcr.io/willbackdeveloper/testededeploy:1.0
+
       - name: Guardar o jar
         uses: actions/upload-artifact@v4
         with:
